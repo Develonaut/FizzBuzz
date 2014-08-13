@@ -1,15 +1,22 @@
 	
 $("#entryBox").hide();
+$("#exitBox").hide();
 
 $("#addNumber").on("click", function(){
 	$(".introBox").fadeOut();
-	$("#entryBox").fadeIn();
+	$("#entryBox").fadeIn("fast",function() {
+		$("#exitBox").fadeIn();
+	});
 });
 
 $("#exitBox").on("click", function(){
 	$(".introBox").fadeIn();
-	$("#entryBox").fadeOut();
+	$("#entryBox").fadeOut("fast",function() {
+		$("#exitBox").fadeOut();
+	});
 });
+
+
 
 
 
@@ -17,13 +24,13 @@ $("#exitBox").on("click", function(){
 function test(choice) {
 	for (var i = 1; i <= choice; i++) {
 		if (i % 3 === 0 && i % 5 === 0)  {
-			$("#entryBox").append("<p>fizzbuzz</p>");
+			$("#entryList").append("<li>fizzbuzz</li>");
 		} else if (i % 3 === 0) {
-			$("#entryBox").append("<p>fizz</p>");
+			$("#entryList").append("<li>fizz</li>");
 		} else if (i % 5 === 0){
-			$("#entryBox").append("<p>buzz</p>");
+			$("#entryList").append("<li>buzz</li>");
 		} else {
-			$("#entryBox").append("<p>" + i + "</p>");
+			$("#entryList").append("<li>" + i + "</li>");
 		}
 	}
 }

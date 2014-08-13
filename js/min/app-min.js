@@ -1,0 +1,1 @@
+function test(p){for(var z=1;p>=z;z++)$("#entryBox").append(z%3===0&&z%5===0?"<p>fizzbuzz</p>":z%3===0?"<p>fizz</p>":z%5===0?"<p>buzz</p>":"<p>"+z+"</p>")}test();

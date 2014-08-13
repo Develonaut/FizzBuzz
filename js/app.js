@@ -1,3 +1,17 @@
+	
+$("#entryBox").hide();
+
+$("#addNumber").on("click", function(){
+	$(".introBox").fadeOut();
+	$("#entryBox").fadeIn();
+});
+
+$("#exitBox").on("click", function(){
+	$(".introBox").fadeIn();
+	$("#entryBox").fadeOut();
+});
+
+
 
 // Loop that runs the the number given
 function test(choice) {

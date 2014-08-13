@@ -7,8 +7,16 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<h1>FizzBuzz!</h1>
-	<ul id="entryBox"></ul>
+	<div class="introBox">
+		<div class="arrow-up"></div>
+		<h1>Welcome to FizzBuzz!</h1>
+		<input input type="text" id="userChoice" placeholder="Enter a number!"></input>
+		<button id="addNumber" class="addButton"><span>Check it out!</span></button>
+	</div>
+	<div id="entryBox">
+	<button id="exitBox"></button>
+	<ul id="entryList"></ul>
+	</div>
 </body>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

@@ -1,5 +1,20 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,900);
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ font-family: 'Roboto', serif;
+ }
+
+body {
+	background: #edeff0;
+}
+
 h1 {
-	color: blue;
+	color: #384047;
+	text-align: center;
+	font-weight: 700;
+	margin: 20px 0 0 0;
 }
 
 p {
@@ -7,7 +22,119 @@ p {
 	font-weight: bold;
 }
 
+
+input {
+	outline: none;
+}
+
+input:active {
+	outline: none;
+}
+
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 15px solid white;
+	position: relative;
+	top: -14px;
+	left: 30px;	
+}
+
+.introBox {
+	width: 450px;
+	height: 240px;
+	padding: 0 0 0 0;
+	margin: 120px auto 0 auto;
+	background: white;
+	display: block;
+	border-radius: 5px;
+	border-bottom: 2px solid rgba(0,0,0,0.2);
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+#userChoice {
+	display: block;
+	margin: 15px auto 0 auto;
+	width: 315px;
+	height: 40px;
+	border: none;
+	padding-left: 20px;
+	text-align: left;
+	font-size: 16px;
+	font-weight: 500;
+	color: rgba(0,0,0,0.5);
+	background: #e2e5e8;
+	border-radius: 2px;
+}
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+     font-family: 'Roboto', sans-serif;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-family: 'Roboto', sans-serif;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-family: 'Roboto', sans-serif;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+     font-family: 'Roboto', sans-serif;
+}
+
+
+.addButton {
+	width: 150px;
+	height: 40px;
+	position: relative;
+	left: 230px;
+	outline: none;
+	background: #637a91;
+	border: none;
+	border-radius: 2px;
+	margin: 20px auto 0 auto;
+}
+
+.addButton:active {
+	background: #4E6276;
+	-moz-box-shadow:    inset 0 1px 1px rgba(0,0,0,0.2);
+   	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.2);
+   	box-shadow:         inset 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.addButton span {
+	color: white;
+	font-weight: 400;
+	letter-spacing: 0.040em;
+}
+
+#exitBox {
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	border: none;
+	outline: none;
+	position: absolute;
+	background: rgba(0,0,0,0.2);
+	right: -10px;
+	top: -10px;
+}
+
+#exitBox:active {
+	background: black;
+}
+
 #entryBox {
 	border: 1px solid red;
-	min-height: 200px;
+	position: absolute;
+	height: 500px;
+	width: 700px;
+	margin: 50px auto 0 auto;
+	left: 0;
+	right: 0;	
 }

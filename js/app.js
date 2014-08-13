@@ -1,15 +1,15 @@
 
 // Loop that runs the the number given
-function test(int) {
-	for (var i = 1; i <= int; i++) {
+function test(choice) {
+	for (var i = 1; i <= choice; i++) {
 		if (i % 3 === 0 && i % 5 === 0)  {
-			console.log("fizzbuzz");
+			$("#entryBox").append("<p>fizzbuzz</p>");
 		} else if (i % 3 === 0) {
-			console.log("fizz");
+			$("#entryBox").append("<p>fizz</p>");
 		} else if (i % 5 === 0){
-			console.log("buzz");
+			$("#entryBox").append("<p>buzz</p>");
 		} else {
-			console.log(i);
+			$("#entryBox").append("<p>" + i + "</p>");
 		}
 	}
 }

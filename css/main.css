@@ -1,3 +1,13 @@
 h1 {
 	color: blue;
 }
+
+p {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#entryBox {
+	border: 1px solid red;
+	min-height: 200px;
+}

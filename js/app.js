@@ -38,7 +38,7 @@ $("#addNumber").on("click", function(){
 			});
 		});
 	} else if (isNaN($inputValue.val().trim())) {
-		$(".numberMessage").fadeIn("fast").delay(1200).fadeOut();
+		$(".numberMessage").fadeIn("fast").delay(pause).fadeOut();
 	}
 });
 
@@ -62,7 +62,7 @@ $(document).keyup(function(event) {
 		});
 	});
 		} else if (isNaN($inputValue.val().trim())) {
-		$(".numberMessage").fadeIn("fast").delay(1200).fadeOut();
+		$(".numberMessage").fadeIn("fast").delay(pause).fadeOut();
 		}
 	}
 });

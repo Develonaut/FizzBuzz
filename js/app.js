@@ -4,6 +4,8 @@ var fizz = 3;
 var buzz = 5;
 var pause = 1200;
 
+var $inputValue = $("#userChoice");
+
 // Loop that runs the the number given
 function test(choice) {
 	for (var i = 1; i <= choice; i++) {
@@ -19,7 +21,6 @@ function test(choice) {
 	}
 }
 
-var $inputValue = $("#userChoice");
 
 // function isNumber() {
 // 	if ($inputValue.val() === )
@@ -53,7 +54,7 @@ $("#exitBox").on("click", function(){
 
 
 $(document).keyup(function(event) {
-	if(event.keyCode === 13) {
+	if(event.which === 13) {
 		if ($inputValue.val().trim() !== "" && !isNaN($inputValue.val().trim())) {
 			$(".introBox").fadeOut();
 			test($inputValue.val());
@@ -68,18 +69,31 @@ $(document).keyup(function(event) {
 });
 
 
-    var counter = $('.counter');
-    
-    $('#userChoice').on('input keyup keydown focus', function () {
-            var $this = $(this);
-            var maxlength = $this.attr('maxlength');
-            var value = $this.val();
-    
-            if(value.length > 0) {
-                counter.text((maxlength - $this.val().length));
-            } else {
-                counter.text(maxlength);
-            }   
-        });
 
+$('#userChoice').on('input keyup keydown focus', function () {
+        var counter = $('.counter');
+        var $this = $(this);
+        var maxlength = $this.attr('maxlength');
+        var value = $this.val();
+
+        if(value.length > 0) {
+            counter.text((maxlength - $this.val().length));
+        } else {
+            counter.text(maxlength);
+        }   
+    });
+
+
+$inputValue.on("keydown", function(event) {
+	if ($(this).val() === "" && event.which === 32) {
+		return false;
+	}
+});
+
+
+$("#item_name, #item_desc").on('keypress', function(e) {
+	if ($(this).val() === "" && e.which === 32) {
+	   return false;
+	}
+});
 

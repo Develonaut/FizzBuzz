@@ -31,14 +31,14 @@ $("#entryBox").hide();
 $("#exitBox").hide();
 
 $("#addNumber").on("click", function(){
-	if ($inputValue.val().trim() !== "" && !isNaN($inputValue.val().trim())) {
+	if ($inputValue.val().trim() !== "" && !isNaN($inputValue.val().trim()) && $inputValue.val().trim() % 1 === 0) {
 		$(".introBox").fadeOut();
 		test($inputValue.val());
 		$("#entryBox").fadeIn("fast",function() {
 			$("#exitBox").fadeIn(function () {
 			});
 		});
-	} else if (isNaN($inputValue.val().trim())) {
+	} else if ($inputValue.val().trim() === "" || isNaN($inputValue.val().trim()) || $inputValue.val().trim() % 1 !== 0) {
 		$(".numberMessage").fadeIn("fast").delay(pause).fadeOut();
 	}
 });
@@ -55,14 +55,14 @@ $("#exitBox").on("click", function(){
 
 $(document).keyup(function(event) {
 	if(event.which === 13) {
-		if ($inputValue.val().trim() !== "" && !isNaN($inputValue.val().trim())) {
+		if ($inputValue.val().trim() !== "" && !isNaN($inputValue.val().trim()) && $inputValue.val().trim() % 1 === 0) {
 			$(".introBox").fadeOut();
 			test($inputValue.val());
 			$("#entryBox").fadeIn("fast",function() {
 			$("#exitBox").fadeIn(function () {
 		});
 	});
-		} else if (isNaN($inputValue.val().trim())) {
+		} else if ($inputValue.val().trim() === "" || isNaN($inputValue.val().trim()) || $inputValue.val().trim() % 1 !== 0) {
 		$(".numberMessage").fadeIn("fast").delay(pause).fadeOut();
 		}
 	}

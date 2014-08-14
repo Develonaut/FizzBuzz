@@ -102,6 +102,7 @@ input:active {
 
 .numberMessage {
 	position: absolute;
+	font-size: 14px;
 	display: block;
 	width: 130px;
 	left: 80px;
@@ -138,17 +139,21 @@ input:active {
 
 ::-webkit-input-placeholder { /* WebKit browsers */
      font-family: 'Roboto', sans-serif;
+     font-size: 15px;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     font-family: 'Roboto', sans-serif;
     opacity:  1;
+    font-size: 15px;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
     font-family: 'Roboto', sans-serif;
     opacity:  1;
+    font-size: 15px;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
      font-family: 'Roboto', sans-serif;
+     font-size: 15px;
 }
 
 

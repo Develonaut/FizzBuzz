@@ -3,18 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,900' rel='stylesheet' type='text/css'> -->
 </head>
 <body>
 	<div class="introBox">
 		<div class="arrow-up"></div>
 		<h1>Welcome to FizzBuzz!</h1>
-		<input input type="text" id="userChoice" placeholder="Enter a number!"></input>
+		<span class="counter">3</span>
+		<span class="numberMessage">That doesn't look like a number.</span>
+		<input type="text" id="userChoice" placeholder="Enter up to a three digit number!" maxlength="3"></input>
 		<button id="addNumber" class="addButton"><span>Check it out!</span></button>
 	</div>
 	<div id="entryBox">
-	<button id="exitBox"></button>
+	<button id="exitBox" class="icon-cross"></button>
 	<ul id="entryList"></ul>
 	</div>
 </body>
